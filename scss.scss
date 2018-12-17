@@ -1,0 +1,347 @@
+// register-page template
+
+.register-title {
+    font-size: $header__lg;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: $font__second;
+    padding-bottom: 50px;
+}
+
+.register-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 100px;
+    padding-top: 80px;
+}
+
+.register-description,
+.register-form {
+    max-width: 100%;
+    width: 50%;
+    flex: 0 0 50%;
+}
+
+.form__register{
+    display: flex;
+    flex-direction: column;
+}
+
+.register-description {
+    padding-right: 30px;
+}
+
+.form__input {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    margin: 10px 0;
+    height: 60px;
+    color: $black;
+    padding: 10px 20px;
+    border: 3px solid #fff;
+}
+
+.form__input::placeholder {
+    color: #575559;
+}
+
+.form__input:focus {
+    border: 3px solid $color__main--white;
+}
+
+.form__input:focus:valid {
+    border: 3px solid $color__main--green;
+}
+
+.form__input:focus:invalid{
+    border: 3px solid $color__main--red;
+}
+
+.form__input.input--error {
+    border: 3px solid $color__main--red;
+}
+
+@media (max-width: 1100px) {
+    .register-description,
+    .register-form {
+        max-width: 100%;
+        width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .register-description {
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+}
+
+
+
+
+@media (max-width: 600px) {
+    .flex-sbc {
+        flex-direction: column-reverse;
+    }
+
+    .btn__what {
+        margin-top: 30px;
+    }
+
+    .link--back {
+        margin-top: 30px;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .register-title {
+        font-size: 50px;
+    }
+
+    .form__register {
+        height: 500px !important;
+    }
+
+    .link--white {
+        margin-top: 30px;
+    }
+}
+
+
+
+
+//question page template
+
+.contest-wrap {
+    margin: auto;
+    max-width: 1000px;
+}
+
+
+.question__item.is-active {
+    margin-left: 0;
+}
+
+.question__item.is-next {
+    margin-left: 100%;
+}
+
+.question__item.is-prev {
+    margin-left: -100%;
+}
+
+
+.label {
+    position: relative;
+    padding-left: 40px;
+    display: block;
+}
+
+.label input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: solid 2px $green;
+  background-color: $color__main--white;
+}
+
+.label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.label input:checked ~ .checkmark {
+  background-color: $green;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.label .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+.counter-wrap {
+    display: flex;
+    padding: 30px 30px 30px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contest-counter {
+    font-size: $header__lg;
+    font-family: $font__second;
+    display: flex;
+
+}
+
+.contest-clock {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock-ikon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+#form-question {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.question {
+    font-size: $header__xs;
+    font-weight: bold;
+}
+
+
+.answers {
+    margin-top: 40px;
+}
+
+.answer-item {
+    margin-top: 15px;
+    font-size: $text__md;
+    padding: 0 10px 10px 0;
+    width: 90%;
+}
+
+.answer-item label {
+    cursor: pointer;
+}
+
+.question__btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.question__item-wrap {
+    display: flex;
+    overflow: hidden;
+}
+
+.question__item {
+    width: 100%;
+    flex: 0 0 100%;
+    transition: ease .5s;
+}
+
+@media ( max-width: 500px) {
+    .question__btn-wrap {
+        flex-direction: column;
+    }
+
+    .js-prev-question {
+        text-align: center;
+    }
+
+    .answer-item {
+        font-size: $text__xs;
+    }
+
+    .checkmark {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .label {
+        padding-left: 25px;
+    }
+
+    #form-question {
+        height: auto;
+    }
+}
+
+
+//brales udział 
+
+@media ( max-width: 760px) {
+    .eko-mind__image {
+        width: 300px;
+        height: auto;
+    }
+    
+    .think__eko-title,
+    .prize__title {
+        font-size: $header__lg2;
+    }
+}
+
+
+
+//login register
+
+.title--lightning {
+    font-size: $header__lg;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: $font__second;
+}
+
+
+@media ( max-width: 700px) {
+
+    .title--lightning {
+        font-size: $header__md;
+        width: 100%;
+    }
+   
+}
+
+.title--lightning::before,
+.title--lightning::after {
+    display: none;
+}
+
+
+// login 
+
+@media ( max-width: 600px) {
+
+    .link--lost-password {
+        margin-top: 40px;
+    }
+
+}
+
+@media ( max-width: 350px) {
+
+    .title--lightning {
+       font-size: $header__xs;
+    }
+
